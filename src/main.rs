@@ -1,3 +1,5 @@
+extern crate tectonic;
+
 use std::error::Error;
 use std::fs::File;
 use std::io::prelude::*;
@@ -18,7 +20,7 @@ fn main() {
   let status = greeting.status;
   println!("Hello, world! {}", status);
 
-  let path = Path::new("pisomka.tex");
+  let path = Path::new("uvod.tex");
   let display = path.display();
 
   // Open the path in read-only mode, returns `io::Result<File>`
@@ -37,47 +39,115 @@ fn main() {
   }
 }
 
-fn show_file_contents(display: Display, s: String) {
+fn show_file_contents(_display: Display, s: String) {
   // print!("{} contains:\n{}", display, s);
 
   prepare_final_tex(
     s,
-    "{pr1_ing_10}".to_string(),
-    "{pr2_ing_5}".to_string(),
-    "{pr3_ing_12}".to_string(),
+    "pr1-ing-10".to_string(),
+    "pr2-ing-5".to_string(),
+    "pr3-ing-12".to_string(),
   );
 }
 
-fn prepare_final_tex(
-  fulltext: String,
-  pr1: String,
-  pr2: String,
-  pr3: String,
-) -> std::io::Result<()> {
-  let part1 = "\\documentclass{article}\n
-  \\usepackage[utf8]{inputenc}\n\n
+fn prepare_final_tex(uvod: String, pr1: String, pr2: String, pr3: String) -> std::io::Result<()> {
+  // let part1 = format!("\\documentclass[12pt]{article}
+  // \\usepackage{{graphics,amssymb,amsmath}}
 
-  \\title{Matematika I}\n\n
+  // \\usepackage[slovak]{babel}
+  // \\usepackage[utf8]{inputenc}
+  // \\usepackage[IL2]{fontenc}
 
-  \\begin{document}\n
-    \\maketitle\n\n";
+  // \\usepackage{multicol}
+  // \\usepackage{mathtools}
+
+  // \\pagestyle{empty}
+
+  // \\setlength\\textwidth{170mm}
+
+  // \\setlength\\textheight{265mm}
+  // \\addtolength\\oddsidemargin{-20mm}
+  // \\addtolength\\topmargin{-20mm}
+  // \\setlength{\\parindent}{1pt}
+  // \\setlength{\\parskip}{10pt}
+  // \\newcount\\pocet
+  // \\pocet = 1
+  // \\def\\pr{{\\bf \\the \\pocet .\\ \\global\\advance\\pocet by 1}}
+
+  // \\newcommand{\\g}{ \\dots \\dots \\dots \\dots \\dots \\ }
+  // \\newcommand{\\gu}{ \\dots \\dots \\ }
+  // \\newcommand{\\gr}{\\dotfill \\ }
+
+  // \\begin{document}
+
+  // \\newenvironment{itemize*}
+  //  {\\begin{itemize}
+  //    \\setlength{\\itemsep}{0pt}
+  //    \\setlength{\\parskip}{0pt}}
+  //  {\\end{itemize}}
+
+  // \\newenvironment{enumerate*}
+  //  {\\begin{enumerate}
+  //    \\setlength{\\itemsep}{0pt}
+  //    \\setlength{\\parskip}{0pt}}
+  //  {\\end{enumerate}}
+
+  // \\phantom{a}
+
+  // \\centerline{\\textbf{\\Large Matematika I}}
+  // \\smallskip
+  // \\centerline{current_date}
+  // \\centerline{9:00}
+  // \\vskip0.5cm
+
+  // \\centerline{\\bf  Meno a priezvisko: \\gr Podpis: \\gr}
+  // \\vskip0.5cm
+  // \\centerline{\\bf  Ročník: \\gr študijný program: \\gr}
+  // \\vskip0.5cm
+
+  // \\medskip\n\n", current_date = "05 Január 2020");
 
   let part2 = format!(
-    "\\include{}\n
-  \\include{}\n
-  \\include{}\n\n",
+    r#"{}
+
+    \newpage
+
+    {}
+    {}"#,
     pr1.to_string(),
     pr2.to_string(),
     pr3.to_string()
   );
 
-  let part3 = "\\end{document}";
+  let part3 = "\\end{document}".to_string();
 
-  let result = [part1, &part2, part3].join(""); //format!("{}", fulltext, pr1, pr2, pr3);
+  let result = [uvod, part2, part3].join(""); //format!("{}", fulltext, pr1, pr2, pr3);
 
   println!("{}", result);
 
   let mut buffer = File::create("exam_sources/ing_01.tex")?;
   buffer.write_fmt(format_args!("{}", result))?;
+
+  // let source = File::open("exams_sources/ing_01.tex")?;
+  let latex = r#"
+\documentclass{article}
+\begin{document}
+Hello, world!
+\end{document}
+"#;
+
+  /* Run the TeX engine */
+  let pdf_data: Vec<u8> = {
+    tectonic::latex_to_pdf(result)?
+  };
+  println!("Output PDF size is {:?} bytes", pdf_data.len());
+
+  /* output the results */
+  {
+    std::fs::create_dir_all("pdfs")?;
+    let mut out_buf_pdf = File::create(format!("pdfs/{}.pdf", "ing_01".to_string()))?;
+    out_buf_pdf.write_all(&pdf_data)?
+  }
+
   Ok(())
 }
