@@ -1,0 +1,239 @@
+\documentclass[12pt]{article}
+\usepackage{graphics,amssymb,amsmath}
+
+\usepackage[slovak]{babel} 
+\usepackage[cp1250]{inputenc}
+\usepackage[IL2]{fontenc}
+
+\usepackage{multicol}
+\usepackage{mathtools}
+
+\pagestyle{empty}
+\setlength\textwidth{170mm}
+\setlength\textheight{265mm}
+\addtolength\oddsidemargin{-20mm}
+\addtolength\topmargin{-20mm}
+\setlength{\parindent}{1pt}
+\setlength{\parskip}{10pt}
+\newcount\pocet
+\pocet = 1
+\def\pr{{\bf \the \pocet .\ \global\advance\pocet by 1}}
+
+\newcommand{\g}{ \dots \dots \dots \dots \dots \ }
+\newcommand{\gu}{ \dots \dots \ }
+\newcommand{\gr}{\dotfill \ }
+
+\begin{document}
+
+\newenvironment{itemize*}
+ {\begin{itemize}
+   \setlength{\itemsep}{0pt}
+   \setlength{\parskip}{0pt}}
+ {\end{itemize}}
+ 
+\newenvironment{enumerate*}
+ {\begin{enumerate}
+   \setlength{\itemsep}{0pt}
+   \setlength{\parskip}{0pt}}
+ {\end{enumerate}}
+
+
+\phantom{a}
+
+\centerline{\textbf{\Large Matematika I}}
+\smallskip
+\centerline{29. január 2015}
+\centerline{8:30}
+\vskip0.5cm
+
+\centerline{\bf  Meno a priezvisko: \gr Podpis: \gr}
+\vskip0.5cm
+\centerline{\bf  Roèník: \gr Študijnı program: \gr}
+\vskip0.5cm
+
+\medskip
+
+\pr (5b) Bod $M$ má v cylindrickom súradnicovom systéme nasledujúce súradnice: $\displaystyle M=\left[\sqrt{2},\frac{3\pi}{4}, \sqrt{6}\right]$.
+
+\begin{enumerate}
+\item[a)] (3b) Urète jeho súradnice v pravouhlom súradnicovom systéme.
+
+\begin{multicols}{2}
+\noindent
+\begin{itemize}
+\item[a)] $M=[1,-1,\sqrt{6}]$
+\item[b)] $M=[-1,1,\sqrt{6}]$
+\end{itemize}
+
+\noindent
+\begin{itemize}
+\item[c)] $M=[-1,-1,\sqrt{6}]$
+\item[d)] $M=[1,1,-\sqrt{6}]$
+\end{itemize}
+\end{multicols}
+
+\item[b)] (2b) Znázornite tento bod v pravouhlom súradnicovom systéme.
+
+\textbf{Náèrt:}
+\end{enumerate}
+
+
+\newpage
+
+\pr (5b) Riešte:
+\begin{enumerate}
+\item[a)] (3b) Vyberte rovnicu kue¾oseèky, ktorá je znázornená na obrázku.
+
+\begin{multicols}{2}
+\noindent
+\includegraphics{elipsa2.pdf}
+
+\begin{itemize}
+\item[a)] $\displaystyle \frac{(x-3)^2}{4}+\frac{(y-4)^2}{9}=1$
+\item[b)] $\displaystyle \frac{(x+3)^2}{4}+\frac{(y+4)^2}{9}=1$
+\item[c)] $\displaystyle \frac{(y-3)^2}{5}+\frac{(x-4)^2}{7}=1$
+\item[d)] $\displaystyle \frac{(x-3)^2}{9}+\frac{(y-4)^2}{4}=1$
+\end{itemize}
+\end{multicols}
+
+\item[b)] (2b) Napíšte všeobecnú rovnicu priamky, ktorá je seènicou kue¾oseèky znázornenej na obrázku.
+\medskip
+
+\hspace{9cm} \textbf{Vısledok:}
+\end{enumerate}
+
+\bigskip
+
+\pr (5b) Vyberte funkciu, ktorej definiènı obor je znázornenı na obrázku.
+
+\begin{multicols}{2}
+\noindent
+\includegraphics{priamky.pdf}
+
+\noindent
+\begin{itemize}
+\item[a)] $\displaystyle f(x,y)= \ln{(x+y)}+\sqrt{x-y}$
+\item[b)] $\displaystyle f(x,y)= \frac{\ln{(x+y)}}{\sqrt{x-y}}$
+\item[c)] $\displaystyle f(x,y)= \frac{\sqrt{x+y}}{\ln{(x-y)}}$
+\item[d)] $\displaystyle f(x,y)= \frac{\ln{(x+y)}}{\sqrt{x+y}}$
+\end{itemize}
+\end{multicols}
+
+\bigskip
+
+\pr (6b) Vypoèítajte hmotnos telesa, ktorého objemová hustota je daná vzahom $$h(x,y,z)=x+y+z.$$ Prièom teleso pozostáva z mnoiny bodov: $\left\langle 0,1\right\rangle\times\left\langle 0,3\right\rangle\times\left\langle 0,6\right\rangle$.
+
+\medskip
+
+\hspace{10cm} \textbf{Vısledok:}
+
+\newpage
+
+\pr (5b)
+Vypoèítajte nasledujúcu limitu
+
+$$
+\lim\limits_{\mathclap{\substack{
+x\rightarrow 0\\
+ y\rightarrow 0\\
+ z\rightarrow 0
+}}}
+\frac{\sin(x^2+y^2+z^2)}{x^2+y^2+z^2}.
+$$
+\medskip
+
+\hspace{10cm} \textbf{Vısledok:}
+
+\bigskip
+
+\pr (6b) Daná je funkcia $\displaystyle f(x,y)=x^2+y^2$ a rovina $\displaystyle \sigma: x+\frac{y}{2}+\frac{z}{3}=1$.
+Nájdite rovinu $\tau$, ktorá je dotykovou rovinou ku grafu funkcie $f(x, y)$ a je rovnobená s rovinou $\sigma$.
+
+\medskip
+
+\hspace{5cm} \textbf{Všeobecná rovnica} roviny $\tau$ je:
+
+\bigskip
+
+\pr (6b) Daná je funkcia $\displaystyle f(x,y,z)=\frac{1}{x^2+y^2+z^2}$, bod $\displaystyle A=[-1,2,-3]$ a vektor $\displaystyle \vec{l}=\left(1,1,1\right).$
+\begin{enumerate}
+\item[a)] (3b) Nájdite gradient funkcie $f(x,y,z)$ v bode $A$.
+\medskip
+
+\hspace{9cm} \textbf{Vısledok:}
+
+\item[b)] (3b) Vypoèítajte deriváciu funkcie $f(x,y,z)$ v bode $A$ v smere vektora $\vec{l}$.
+\medskip
+
+\hspace{9cm} \textbf{Vısledok:}
+\end{enumerate}
+
+\bigskip
+
+\pr (8b) Daná je funkcie $f(x,y)=1+4x-5y$ a mnoina $M$, ktorá je ohranièená priamkami $y=1-x$, $y=x+1$ a $y=3x-3$.
+
+\begin{enumerate}
+\item[a)] (3b) Naèrtnite mnoinu $M$.
+
+\textbf{Náèrt:}
+\vspace{5cm}
+
+\item[b)] (5b) Nájdite najväèšiu a najmenšiu hodnotu funkcie $f(x,y)$, na mnoine $M$.
+\medskip
+
+\hspace{5cm} \textbf{Najväèšia} hodnota funkcie $f(x,y)$ je:
+\medskip
+
+\hspace{5cm} \textbf{Najmenšia} hodnota funkcie $f(x,y)$ je:
+\end{enumerate}
+
+\newpage
+
+\pr (5b) Ko¾ko stacionárnych bodov má funkcia $g(x,y)=x^4 + y^4 -4xy +1$?
+
+\medskip
+
+\hspace{10cm} \textbf{Vısledok:}
+
+\bigskip
+
+\pr (5b) Napíšte súradnice bodu (bodov), v ktorom funkcia $g(x,y)=x^4 + y^4 -4xy +1$ nadobúda lokálne minimum.
+
+\medskip
+
+\hspace{10cm} \textbf{Vısledok:}
+
+\bigskip
+
+\pr (5b) Nájdite všeobecné riešenie diferenciálnej rovnice $y^{\prime}+y = \cos(x)$.
+
+\medskip
+
+\hspace{10cm} \textbf{Vısledok:}
+
+\bigskip
+
+\pr (9b) Daná je lineárna diferenciálna rovnica
+$y^{\prime\prime} - 4y^{\prime}+4y = -12e^{x}$.
+
+\begin{enumerate}
+\item[a)] (3b) Nájdite fundamentálny systém riešení diferenciálnej rovnice s nulovou pravou stranou.
+
+\medskip
+
+\hspace{9cm} \textbf{Vısledok:}
+
+\item[b)] (3b) Napíšte tvar vhodného partikulárneho riešenia.
+
+\medskip
+
+\hspace{9cm} \textbf{Vısledok:}
+
+\item[c)] (3b) Napíšte všeobecné riešenie danej lineárnej diferenciálnej rovnice.
+
+\medskip
+
+\hspace{9cm} \textbf{Vısledok:}
+\end{enumerate}
+
+\end{document}

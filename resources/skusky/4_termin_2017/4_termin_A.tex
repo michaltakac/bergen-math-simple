@@ -1,0 +1,229 @@
+\documentclass[12pt]{article}
+\usepackage{graphics,amssymb,amsmath}
+
+\usepackage[slovak]{babel} 
+\usepackage[cp1250]{inputenc}
+\usepackage[IL2]{fontenc}
+
+\usepackage{multicol}
+\usepackage{mathtools}
+
+\pagestyle{empty}
+\setlength\textwidth{170mm}
+\setlength\textheight{265mm}
+\addtolength\oddsidemargin{-20mm}
+\addtolength\topmargin{-20mm}
+\setlength{\parindent}{1pt}
+\setlength{\parskip}{10pt}
+\newcount\pocet
+\pocet = 1
+\def\pr{{\bf \the \pocet .\ \global\advance\pocet by 1}}
+
+\newcommand{\g}{ \dots \dots \dots \dots \dots \ }
+\newcommand{\gu}{ \dots \dots \ }
+\newcommand{\gr}{\dotfill \ }
+
+\begin{document}
+
+\newenvironment{itemize*}
+ {\begin{itemize}
+   \setlength{\itemsep}{0pt}
+   \setlength{\parskip}{0pt}}
+ {\end{itemize}}
+ 
+\newenvironment{enumerate*}
+ {\begin{enumerate}
+   \setlength{\itemsep}{0pt}
+   \setlength{\parskip}{0pt}}
+ {\end{enumerate}}
+
+
+\phantom{a}
+
+\centerline{\textbf{\Large Matematika I}}
+\smallskip
+\centerline{26. január 2017}
+\centerline{09:00}
+\vskip0.5cm
+
+\centerline{\bf  Meno a priezvisko: \gr Podpis: \gr}
+\vskip0.5cm
+\centerline{\bf  Roèník: \gr Študijný program: \gr}
+\vskip0.5cm
+
+\medskip
+
+\pr (7b) Daná je všeobecná rovnica kuže¾oseèky $x^2+y+6x+10=0$.\\
+\textbf{Doplòte} 
+\begin{enumerate}
+\item[a)] (2b) Kanonická rovnica (rovnica v štandardnom tvare) kuže¾oseèky je\gr
+\item[b)] (1b) Typ kuže¾oseèky je \gr
+\item[c)] (3b) Napíšte
+\begin{itemize}
+\item[$c_1$)] súradnice vrcholu kuže¾oseèky: \gr
+\item[$c_2$)] súradnice ohniska kuže¾oseèky: \gr
+\item[$c_3$)] rovnicu hlavnej osi kuže¾oseèky: \gr
+\end{itemize}
+\item[d)] (1b) Znázornite kuže¾oseèku a v náèrte popíšte jej významné prvky.
+\end{enumerate}
+
+\newpage
+
+\pr (2b) Vyberte funkciu, ktorej definièný obor je znázornený na obrázku.
+
+\begin{multicols}{2}
+\noindent
+\includegraphics{kruznica.pdf}
+
+\noindent
+\begin{itemize}
+\item[a)] $\displaystyle f(x,y)= \sqrt{x}+\ln{(4-x^2-y^2)}$
+\item[b)] $\displaystyle f(x,y)= \arcsin x+\sqrt{4-x^2-y^2}$ % OK
+\item[c)] $\displaystyle f(x,y)= \frac{\ln(x+1)}{\sqrt{4-x^2-y^2}}$ 
+\item[d)] $\displaystyle f(x,y)= \frac{\arcsin{(x+y)}}{\sqrt{4-x^2-y^2}}$
+\end{itemize}
+\end{multicols}
+
+\pr (6b) Vypoèítajte $$\displaystyle \iint\limits_{M}{xy} \ \mathrm{d}x \mathrm{d}y,$$ kde množina $M$ je trojuholník s vrcholmi $A=[1,1]$, $B=[2,1]$ a $C=[2,3]$.
+
+\begin{enumerate}
+\item[]\textbf{Výsledok:}\gr
+\end{enumerate}
+
+\pr (4b) Bod $M$ má v sférickej súradnicovej sústave súradnice: $\displaystyle M=\left[2\sqrt{2},\frac{3\pi}{4}, \frac{\pi}{6}\right]$.
+
+\begin{enumerate}
+\item[a)] (2b) Vyberte správnu odpoveï:\\
+Súradnice bodu $M$ v pravouhlej súradnicovej sústave sú:
+
+
+\noindent
+\begin{itemize}
+\begin{multicols}{2}
+\item[a)] $M=[1,-1,\sqrt{6}]$
+\item[b)] $M=[-1,-1,\sqrt{6}]$
+
+\item[c)] $M=[-1,1,\sqrt{6}]$
+\item[d)] $M=[1,1,-\sqrt{6}]$
+\end{multicols}
+\end{itemize}
+
+
+\item[b)] (2b) Znázornite tento bod $M$ v pravouhlej súradnicovej sústave.
+
+\begin{enumerate}
+\item[]\textbf{Náèrt:}
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+
+\bigskip
+
+\pr (8b) Daná je lineárna diferenciálna rovnica (LDR)
+$y^{\prime\prime} +7y^{\prime}+12y = x^2$.
+
+\begin{enumerate}
+\item[a)](2b) Napíšte charakteristickú rovnicu k danej diferenciálnej rovnici.
+\medskip
+
+\textbf{Charakteristická rovnica je:} \gr
+
+\item[b)] (2b) Nájdite fundamentálny systém riešení diferenciálnej rovnice s nulovou pravou stranou.
+
+\medskip
+
+\textbf{Fundamentálny systém riešení LDR je} \gr
+
+\item[b)] (2b) Napíšte tvar vhodného partikulárneho riešenia.
+
+\medskip
+
+\textbf{Partikulárne riešene je} \gr
+
+\item[c)] (2b) Napíšte všeobecné riešenie danej lineárnej diferenciálnej rovnice.
+
+\medskip
+
+\textbf{Všeobecné riešenie LDR je} \gr
+\end{enumerate}
+
+\bigskip
+
+\pr (4b)
+Vypoèítajte nasledujúcu limitu
+
+$$
+\lim\limits_{
+[x,y]\rightarrow [0,\frac{\pi}{2}]}
+\frac{\sin(x+y)}{x+y}.
+$$
+
+\begin{enumerate}
+\item[]\textbf{Výsledok:}\gr
+\end{enumerate}
+
+
+\pr (6b) Napíšte všeobecnú rovnicu dotykovej roviny ku grafu funkcie $f(x,y)=x^2+y^2-4x+6y+8$, ak h¾adaná dotyková rovina je rovnobežná s rovinou $R_{xy}$.
+
+\begin{enumerate}
+
+\item[]\textbf{Súradnice dotykového bodu sú:} \gr
+\item[]\textbf{Všeobecná rovnica dotykovej roviny je:} \gr
+\end{enumerate}
+
+\bigskip
+
+\pr (6b) Daná je funkcia $\displaystyle f(x,y)=\frac{1}{x^2+y^2}$, bod $\displaystyle A=[-1,1]$ a vektor $\displaystyle \vec{l}=\left(2,-2\right).$
+\begin{enumerate}
+\item[a)] (3b) Nájdite gradient funkcie $f(x,y)$ v bode $A$.
+\medskip
+
+\textbf{Gradient} funkcie $f(x,y)$ v bode $A$ je \gr
+
+\item[b)] (3b) Vypoèítajte deriváciu funkcie $f(x,y)$ v bode $A$ v smere vektora $\vec{l}$.
+\medskip
+
+\textbf{Derivácia} funkcie $f(x,y)$ v bode $A$ v smere vektora $\vec{l}$ je \gr
+\end{enumerate}
+
+\newpage
+
+\pr (27b) Daná je funkcia $f(x,y)=x^3+2xy^2-51x-24y$ a množina $M$. \\
+Množina $M$ je štvorec $ABCD$, ktorého vrcholy majú súradnice $A=[2,0]$, $B=[6,0]$, $C=[2,2]$ a $D=[6,2]$.
+\begin{enumerate}
+\item[a)] Naèrtnite množinu $M$: 
+
+\textbf{Náèrt:}
+\vspace{5cm}
+
+\textbf{Pomocou rovníc popíšte hranice množiny $M$:}
+\begin{enumerate}
+\item (2b) $AB$ \gr
+\item (2b) $AC$ \gr
+\item (2b) $BD$ \gr
+\item (2b) $CD$ \gr
+\end{enumerate}
+
+\item[b)](5b) Nájdite lokálne extrémy funkcie v $M$.\\
+\hspace{5cm} \textbf{Doplòte odpoveï:}
+Funkcia $f(x,y)$ má v bode \gr lokálne \gr
+\medskip
+
+\item[c)] Nájdite viazané lokálne extrémy funkcie na hraniciach $M$.\\
+Na hranici
+\begin{enumerate}
+\item (3b) $AB$ má funkcia $f(x,y)$ má v bode \gr viazané lokálne \gr
+\item (3b) $AC$ má funkcia $f(x,y)$ má v bode \gr viazané lokálne \gr
+\item (3b) $BD$ má funkcia $f(x,y)$ má v bode \gr viazané lokálne \gr
+\item (3b) $CD$ má funkcia $f(x,y)$ má v bode \gr viazané lokálne \gr
+\end{enumerate}
+\item[d)] (2b) Nájdite najväèšiu a najmenšiu hodnotu funkcie $f(x,y)$ na $M$.\\
+
+\textbf{Najväèšia} hodnota funkcie $f(x,y)$ je: \gr
+
+\textbf{Najmenšia} hodnota funkcie $f(x,y)$ je: \gr
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,256 @@
+\documentclass[12pt]{article}
+\usepackage{graphics,amssymb,amsmath}
+
+\usepackage[slovak]{babel} 
+\usepackage[cp1250]{inputenc}
+\usepackage[IL2]{fontenc}
+
+\usepackage{multicol}
+\usepackage{mathtools}
+
+\pagestyle{empty}
+\setlength\textwidth{170mm}
+\setlength\textheight{265mm}
+\addtolength\oddsidemargin{-20mm}
+\addtolength\topmargin{-20mm}
+\setlength{\parindent}{1pt}
+\setlength{\parskip}{10pt}
+\newcount\pocet
+\pocet = 1
+\def\pr{{\bf \the \pocet .\ \global\advance\pocet by 1}}
+
+\newcommand{\g}{ \dots \dots \dots \dots \dots \ }
+\newcommand{\gu}{ \dots \dots \ }
+\newcommand{\gr}{\dotfill \ }
+
+\begin{document}
+
+\newenvironment{itemize*}
+ {\begin{itemize}
+   \setlength{\itemsep}{0pt}
+   \setlength{\parskip}{0pt}}
+ {\end{itemize}}
+ 
+\newenvironment{enumerate*}
+ {\begin{enumerate}
+   \setlength{\itemsep}{0pt}
+   \setlength{\parskip}{0pt}}
+ {\end{enumerate}}
+
+
+\phantom{a}
+
+\centerline{\textbf{\Large Matematika I}}
+\smallskip
+\centerline{05. január 2017}
+\centerline{9:00}
+\vskip0.5cm
+
+\centerline{\bf  Meno a priezvisko: \gr Podpis: \gr}
+\vskip0.5cm
+\centerline{\bf  Roèník: \gr Študijný program: \gr}
+\vskip0.5cm
+
+\medskip
+
+\pr (11b) Daná je všeobecná rovnica kuže¾oseèky $9x^2+4y^2-36x-24y-36=0$.\\
+\textbf{Doplòte} 
+\begin{enumerate}
+\item[a)] Stredová rovnica kuže¾oseèky je\gr
+\item[b)] Kuže¾oseèka je \gr typu.
+\item[c)] Popíšte (ak existujú): 
+\begin{enumerate}
+\item[$c_1$)] dåžka hlavnej poloosi je \gr
+\item[$c_2$)] dåžka ved¾ajšej poloosi je \gr
+\item[$c_3$)] excentricita je \gr
+\end{enumerate}
+\item[d)] Napíšte súradnice (ak existujú):
+\begin{itemize}
+\item[$d_1$)] hlavných vrcholov kuže¾oseèky \gr
+\item[$d_2$)] ved¾ajších vrcholov kuže¾oseèky \gr
+\item[$d_3$)] súradnice ohniska resp. ohnísk kuže¾oseèky \gr
+\end{itemize}
+\item[e)] Znázornite kuželoseèku a v náèrte popíste jej významné prvky.
+\end{enumerate}
+
+\newpage
+
+\pr (2b) Vyberte funkciu, ktorej definièný obor je znázornený na nasledujúcom obrázku.
+
+\begin{multicols}{2}
+\scalebox{0.65}{\includegraphics{Df.pdf}}
+
+\begin{itemize}
+\item[a)] $\displaystyle f(x,y)= \ln{(9-x^2-y^2)}+\ln{(x^2-y^2)}$
+\item[b)] $\displaystyle f(x,y)= \sqrt{9-x^2-y^2}+\ln{(x^2-y^2)}$
+\item[c)] $\displaystyle f(x,y)= \sqrt{9-x^2-y^2}+\ln{(x^2+y^2)}$
+\item[d)] $\displaystyle f(x,y)= \sqrt{9-x^2-y^2}+\sqrt{x^2-y^2}$
+\end{itemize}
+\end{multicols}
+
+\pr (6b) Vypoèítajte $$\displaystyle \iint\limits_{M}{x^2y} \ \mathrm{d}x \mathrm{d}y,$$ kde množina $M$ je obdåžnik s vrcholmi $A=[1,1]$, $B=[2,1]$, $C=[2,2]$ a $D=[1,2]$.
+
+\begin{enumerate}
+\item[]\textbf{Výsledok:}\gr
+\end{enumerate}
+
+\pr (4b) Bod $M$ má v cylindrickej súradnicovej sústave nasledujúce súradnice: $\displaystyle M=\left[\sqrt{2},\frac{3\pi}{4}, \sqrt{6}\right]$.
+
+\begin{enumerate}
+\item[a)] (2b) Vyberte správnu odpoveï:\\
+Súradnice bodu $M$ v pravouhlej súradnicovej sústave sú:
+
+\begin{multicols}{2}
+\noindent
+\begin{itemize}
+\item[a)] $M=[1,-1,\sqrt{6}]$
+\item[b)] $M=[-1,-1,\sqrt{6}]$
+\end{itemize}
+
+\noindent
+\begin{itemize}
+\item[c)] $M=[-1,1,\sqrt{6}]$
+\item[d)] $M=[1,1,-\sqrt{6}]$
+\end{itemize}
+\end{multicols}
+
+\item[b)] (2b) Znázornite tento bod $M$ v pravouhlej súradnicovej sústave.
+
+\begin{enumerate}
+\item[]\textbf{Náèrt:}
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+%
+%\pr (5b) Ko¾ko stacionárnych bodov má funkcia $g(x,y)=x^3+3xy^2-51x-24y$?
+%
+%\medskip
+%
+%\hspace{10cm} \textbf{Výsledok:}
+%
+%\bigskip
+%
+%\pr (5b) Napíšte súradnice bodu (bodov), v ktorom funkcia $g(x,y)=x^3+3xy^2-51x-24y$ nadobúda lokálne minimum.
+%
+%\medskip
+%
+%\hspace{10cm} \textbf{Výsledok:}
+
+%\bigskip
+%
+%\pr (5b) Nájdite riešenie diferenciálnej rovnice $\displaystyle y^{\prime}-2y = -4x$, ktoré spåòa zaèiatoènú podmienku $\displaystyle y(1)=\frac{1}{2}$.
+%
+%\medskip
+%
+%\hspace{10cm} \textbf{Výsledok:}
+
+\bigskip
+
+\pr (8b) Daná je lineárna diferenciálna rovnica (LDR)
+$y^{\prime\prime} - 7y^{\prime}+12y = -12e^{x}$.
+
+\begin{enumerate}
+\item[a)](2b) Napíšte charakteristickú rovnicu k danej diferenciálnej rovnici.
+\medskip
+
+\textbf{Charakteristická rovnica je:} \gr
+
+\item[b)] (2b) Nájdite fundamentálny systém riešení diferenciálnej rovnice s nulovou pravou stranou.
+
+\medskip
+
+\textbf{Fundamentálny systém riešení LDR je} \gr
+
+\item[b)] (2b) Napíšte tvar vhodného partikulárneho riešenia.
+
+\medskip
+
+\textbf{Partikulárne riešene je} \gr
+
+\item[c)] (2b) Napíšte všeobecné riešenie danej lineárnej diferenciálnej rovnice.
+
+\medskip
+
+\textbf{Všeobecné riešenie LDR je} \gr
+\end{enumerate}
+
+\bigskip
+
+\pr (4b)
+Vypoèítajte nasledujúcu limitu
+
+$$
+\lim\limits_{\mathclap{\substack{
+x\rightarrow 2\\
+ y\rightarrow -1
+}}}
+\frac{\sin(x+2y)^2}{x^2+2xy}.
+$$
+
+\begin{enumerate}
+\item[]\textbf{Výsledok:}\gr
+\end{enumerate}
+
+
+\pr (6b) Napíšte všeobecnú rovnicu dotykovej roviny ku grafu funkcie $f(x, y)=5-x^2+2x-y^2-8y$, ak je h¾adaná dotyková rovina je rovnobežná so súradnicovou rovinou $R_{xy}$.
+
+\begin{enumerate}
+
+\item[]\textbf{Súradnice dotykového bodu sú:} \gr
+\item[]\textbf{Všeobecná rovnicu dotykovej roviny je:} \gr
+\end{enumerate}
+
+\bigskip
+
+\pr (6b) Daná je funkcia $\displaystyle f(x,y)=\ln{(x^2+y^2)}$, bod $\displaystyle A=[-1,2]$ a vektor $\displaystyle \vec{l}=\left(-2,-1\right).$
+\begin{enumerate}
+\item[a)] (3b) Nájdite gradient funkcie $f(x,y)$ v bode $A$.
+\medskip
+
+\textbf{Gradient} funkcie $f(x,y)$ v bode $A$ je \gr
+
+\item[b)] (3b) Vypoèítajte deriváciu funkcie $f(x,y)$ v bode $A$ v smere vektora $\vec{l}$.
+\medskip
+
+\textbf{Derivácia} funkcie $f(x,y)$ v bode $A$ v smere vektora $\vec{l}$ je \gr
+\end{enumerate}
+
+\newpage
+
+\pr (23b) Daná je funkcia $f(x,y)=2x^2-x+y^2$ a množina $M$. \\
+Množina $M$ je trojuholník $ABC$, ktorého vrcholy majú súradnice $A=[0,0]$ $B=[3,0]$ a $C=[0,3]$.
+\begin{enumerate}
+\item[a)] (1b) Naèrtnite množinu $M$ a pomocou rovníc popíšte jej hranice.
+
+\textbf{Náèrt:}
+\vspace{5cm}
+
+\textbf{Rovnice hraníc:}
+\begin{enumerate}
+\item (2b) $AB$ \gr
+\item (2b) $AC$ \gr
+\item (2b) $BC$ \gr
+\end{enumerate}
+
+\item[b)](5b) Nájdite lokálne extrémy funkcie v $M$.\\
+\hspace{5cm} \textbf{Doplòte odpoveï:}
+Funkcia $f(x,y)$ má v bode \gr lokálne \gr
+\medskip
+
+\item[c)] Nájdite viazané lokálne extrémy funkcie na hraniciach oblasti $M$.\\
+Na hranici
+\begin{enumerate}
+\item (3b) $AB$ má funkcia $f(x,y)$ má v bode \gr viazané lokálne \gr
+\item (3b) $AC$ má funkcia $f(x,y)$ má v bode \gr viazané lokálne \gr
+\item (3b) $BC$ má funkcia $f(x,y)$ má v bode \gr viazané lokálne \gr
+\end{enumerate}
+\item[d)] (2b) Nájdite najväèšiu a najmenšiu hodnotu funkcie $f(x,y)$ na oblasti $M$.\\
+
+\textbf{Najväèšia} hodnota funkcie $f(x,y)$ je: \gr
+
+\textbf{Najmenšia} hodnota funkcie $f(x,y)$ je: \gr
+
+\end{enumerate}
+
+\end{document}
