@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{graphics,amssymb,amsmath}
+
+\usepackage[slovak]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[IL2]{fontenc}
+
+\usepackage{multicol}
+\usepackage{mathtools}
+
+\pagestyle{empty}
+\setlength\textwidth{170mm}
+\setlength\textheight{265mm}
+\addtolength\oddsidemargin{-20mm}
+\addtolength\topmargin{-20mm}
+\setlength{\parindent}{1pt}
+\setlength{\parskip}{10pt}
+\newcount\pocet
+\pocet = 1
+\def\pr{{\bf \the \pocet .\ \global\advance\pocet by 1}}
+
+\newcommand{\g}{ \dots \dots \dots \dots \dots \ }
+\newcommand{\gu}{ \dots \dots \ }
+\newcommand{\gr}{\dotfill \ }
+
+\begin{document}
+
+\newenvironment{itemize*}
+ {\begin{itemize}
+   \setlength{\itemsep}{0pt}
+   \setlength{\parskip}{0pt}}
+ {\end{itemize}}
+
+\newenvironment{enumerate*}
+ {\begin{enumerate}
+   \setlength{\itemsep}{0pt}
+   \setlength{\parskip}{0pt}}
+ {\end{enumerate}}
+
+
+\phantom{a}
+
+\centerline{\textbf{\Large Matematika I}}
+\smallskip
+\centerline{05. január 2020}
+\centerline{9:00}
+\vskip0.5cm
+
+\centerline{\bf  Meno a priezvisko: \gr Podpis: \gr}
+\vskip0.5cm
+\centerline{\bf  Ročník: \gr študijný program: \gr}
+\vskip0.5cm
+
+\medskip
